@@ -1,0 +1,54 @@
+.welcome-container {
+  margin-bottom: 2rem;
+}
+
+.welcome-container h1 {
+  background: linear-gradient(135deg, #646cff 0%, #61dafb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.welcome-content {
+  margin: 2rem 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.feature h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: #888;
+  margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .feature {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .feature:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
