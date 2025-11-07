@@ -1,25 +1,21 @@
-import { useState } from 'react'
-import './App.css'
-import Welcome from './components/Welcome'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import EmojiRain from './pages/EmojiRain'
+import EmojiPaint from './pages/EmojiPaint'
+import EmojiClicker from './pages/EmojiClicker'
+import EmojiMatcher from './pages/EmojiMatcher'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <Welcome />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Licznik: {count}
-        </button>
-        <p>
-          Edytuj <code>src/App.tsx</code> i zapisz, aby przetestować HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Kliknij w logo Vite i React, aby dowiedzieć się więcej
-      </p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/emoji-rain" element={<EmojiRain />} />
+        <Route path="/emoji-paint" element={<EmojiPaint />} />
+        <Route path="/emoji-clicker" element={<EmojiClicker />} />
+        <Route path="/emoji-matcher" element={<EmojiMatcher />} />
+      </Routes>
+    </Router>
   )
 }
 
