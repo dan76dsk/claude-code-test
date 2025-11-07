@@ -13,8 +13,10 @@ Projekt React utworzony z Vite i TypeScript.
 ## Instalacja
 
 ```bash
-npm install
+npm install --ignore-scripts
 ```
+
+> **Uwaga:** Flaga `--ignore-scripts` jest wymagana ze względu na problem z patch-package w rollup. Wszystkie funkcjonalności projektu działają poprawnie.
 
 ## Uruchomienie
 

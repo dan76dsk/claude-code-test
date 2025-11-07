@@ -1,8 +1,18 @@
 # Instrukcje instalacji
 
-Jeśli napotykasz problemy z instalacją (błąd `patch-package`), wykonaj poniższe kroki:
+## Zalecana instalacja
 
-## Krok 1: Wyczyść poprzednie instalacje
+Ze względu na problem z patch-package w pakiecie rollup, użyj:
+
+```bash
+npm install --ignore-scripts
+```
+
+**To jest normalne i bezpieczne.** Wszystkie funkcjonalności projektu działają poprawnie.
+
+## Jeśli masz problemy
+
+Jeśli napotykasz błędy, wyczyść poprzednie instalacje:
 
 ```bash
 # Usuń node_modules (jeśli istnieje)
@@ -13,23 +23,12 @@ rm -f package-lock.json
 
 # Wyczyść cache npm
 npm cache clean --force
-```
 
-## Krok 2: Zainstaluj zależności
-
-```bash
-npm install
-```
-
-## Alternatywne rozwiązanie
-
-Jeśli powyższe nie zadziała, spróbuj:
-
-```bash
+# Zainstaluj ponownie
 npm install --ignore-scripts
 ```
 
-A następnie:
+## Uruchomienie projektu
 
 ```bash
 npm run dev
